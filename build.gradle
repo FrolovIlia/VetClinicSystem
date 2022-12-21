@@ -6,7 +6,8 @@ plugins {
 
 
 group 'org.example'
-version '1.0-SNAPSHOT'
+version '7.6'
+
 
 sourceCompatibility = 11
 
@@ -32,14 +33,14 @@ dependencies {
     testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.7.2'
 }
 
-task copyConfig(type: Copy) {
-    from ('src/main/resources')
-    into 'build/config'
-
-    // refer to project and replace foo by string bar
-    expand(project: project, foo: 'bar')
-
-}
+//task copyConfig(type: Copy) {
+//    from ('src/main/resources')
+//    into 'build/config'
+//
+//    // refer to project and replace foo by string bar
+//    expand(project: project, foo: 'bar')
+//
+//}
 jar {
     manifest {
         attributes(

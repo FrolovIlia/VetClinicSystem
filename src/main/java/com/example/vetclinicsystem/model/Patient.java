@@ -7,9 +7,9 @@ import org.springframework.data.annotation.Id;
 @Data
 public class Patient {
     @Id
-    private String PatientId;
-    private String PatientNickname;
-    private String Color;
-    private String Breed;
-    private int Age;
+    private String patientId;
+    private String patientNickname;
+    private String color;
+    private String breed;  //порода
+    private int age;
 }

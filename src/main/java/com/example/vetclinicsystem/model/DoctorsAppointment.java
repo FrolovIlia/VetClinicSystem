@@ -10,11 +10,11 @@ import java.time.LocalDateTime;
 public class DoctorsAppointment {
     @Id
     private String id;
-    private String DoctorFullName;
-    private String ClientFullName;
-    private String PatientNickname;
-    private String Problem;
-    private String Bio;
+    private String doctorFullName;
+    private String clientFullName;
+    private String patientNickname;
+    private String problem;
+    private String bio;
     private LocalDateTime startTime;
     private LocalDateTime endTime;
     private boolean scheduled;

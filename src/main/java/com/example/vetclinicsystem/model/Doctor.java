@@ -7,6 +7,6 @@ import org.springframework.data.annotation.Id;
 @Data
 public class Doctor {
     @Id
-    private String DoctorId;
-    private String DoctorFullName;
+    private String doctorId;
+    private String doctorFullName;
 }

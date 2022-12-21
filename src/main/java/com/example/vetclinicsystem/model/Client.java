@@ -8,5 +8,5 @@ import org.springframework.data.annotation.Id;
 public class Client {
     @Id
     private String id;
-    private String ClientFullName;
+    private String clientFullName;
 }
