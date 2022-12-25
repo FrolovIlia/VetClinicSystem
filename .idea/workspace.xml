@@ -4,13 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e9c20990-f2c9-49bc-a421-c086a562c957" name="Changes" comment="Create controller basic files.">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/vetclinicsystem/service/DoctorService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/vetclinicsystem/controller/DoctorController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/vetclinicsystem/controller/DoctorController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/vetclinicsystem/repository/DoctorRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/vetclinicsystem/repository/DoctorRepository.java" afterDir="false" />
-    </list>
+    <list default="true" id="e9c20990-f2c9-49bc-a421-c086a562c957" name="Changes" comment="Update DoctorRepository." />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -131,7 +125,14 @@
       <option name="project" value="LOCAL" />
       <updated>1671825865540</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="Update DoctorRepository.">
+      <created>1671969723757</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1671969723757</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -142,6 +143,7 @@
     <MESSAGE value="Create basements for repository files." />
     <MESSAGE value="Edit model name." />
     <MESSAGE value="Create controller basic files." />
-    <option name="LAST_COMMIT_MESSAGE" value="Create controller basic files." />
+    <MESSAGE value="Update DoctorRepository." />
+    <option name="LAST_COMMIT_MESSAGE" value="Update DoctorRepository." />
   </component>
 </project>
