@@ -1,7 +1,7 @@
 package com.example.vetclinicsystem.controller;
 
 import com.example.vetclinicsystem.model.Doctor;
-//import com.example.vetclinicsystem.service.DoctorService;
+import com.example.vetclinicsystem.service.DoctorService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -26,7 +26,7 @@ public class DoctorController {
     }
 
     @PostMapping(path = "doctor")
-    public User post(@RequestBody User doctor) {
+    public Doctor post(@RequestBody Doctor doctor) {
         return userService.saveUser(doctor);
     }
 }
