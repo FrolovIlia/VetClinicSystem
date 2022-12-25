@@ -9,4 +9,5 @@ public class Doctor {
     @Id
     private String doctorId;
     private String doctorFullName;
+
 }

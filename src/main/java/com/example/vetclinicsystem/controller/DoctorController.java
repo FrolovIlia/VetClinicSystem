@@ -20,13 +20,18 @@ public class DoctorController {
         return ResponseEntity.ok(userService.findAll());
     }
 
-    @GetMapping(path = "/doctor/{username}")
-    public Optional<Doctor> findById(@PathVariable("username") String username) {
-        return userService.findByUsername(username);
+//    Довести до ума ету штуку
+//    @GetMapping(path = "/doctor/{username}")
+//    public Optional<Doctor> findById(@PathVariable("username") String username) {
+//        return userService.findByUsername(username);
+//    }
+
+    @PostMapping(path = "/doctor/")
+    public void post(@RequestBody Doctor doctor) {
+        userService.saveDoctor(doctor);
     }
 
-    @PostMapping(path = "doctor")
-    public Doctor post(@RequestBody Doctor doctor) {
-        return userService.saveUser(doctor);
-    }
+    //Добавить обновление - Update по ID
+
 }
+
