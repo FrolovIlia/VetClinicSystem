@@ -5,9 +5,9 @@
 Задачи:
 - [x] Перечитать про REST.
 - [x] Продумать модель данных (Врачи, Пациенты, Клиенты, МедКарта, Записи к врачу)
-- [ ] Прочитать про Hibernate, JPA, Sprint Repository
-- [ ] Разобраться как Spring Data Repository связан с Hibernate
-- [ ] Прочитать, какие аналоги есть у Hibernate
+- [x] Прочитать про Hibernate, JPA, Sprint Repository
+- [x] Разобраться как Spring Data Repository связан с Hibernate
+- [x] Прочитать, какие аналоги есть у Hibernate
 - [ ] Прочитать, что такое Mongodb
 - [ ] Попробовать подключиться к mongodb через консоль
 - [ ] Добавить GET для userID
