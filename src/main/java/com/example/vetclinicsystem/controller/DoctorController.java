@@ -20,11 +20,10 @@ public class DoctorController {
         return ResponseEntity.ok(userService.findAll());
     }
 
-//    Довести до ума ету штуку
-//    @GetMapping(path = "/doctor/{username}")
-//    public Optional<Doctor> findById(@PathVariable("username") String username) {
-//        return userService.findByUsername(username);
-//    }
+    @GetMapping(path = "/doctor/{username}")
+    public Optional<Doctor> findById(@PathVariable("username") String username) {
+        return userService.findByUsername(username);
+    }
 
     @PostMapping(path = "/doctor/")
     public void post(@RequestBody Doctor doctor) {
@@ -32,6 +31,41 @@ public class DoctorController {
     }
 
     //Добавить обновление - Update по ID
+
+//    @PatchMapping(path = "/doctor/{doctorID}")
+//    public Optional<Doctor> update(@PathVariable Integer doctorId, @RequestBody CreateUserRequest request) {
+//        return userService.updateDoctor(userId, request);
+//    }
+
+
+    //Пример
+//    @PatchMapping(value = "/{userId}", consumes = APPLICATION_JSON_VALUE, produces = APPLICATION_JSON_VALUE)
+//    public UserResponse update(@PathVariable Integer userId, @RequestBody CreateUserRequest request) {
+//        return userService.update(userId, request);
+//    }
+
+
+
+
+
+    //Добавить удаление по ID
+
+//    @DeleteMapping(path = "/doctor/{id}")
+//    public void deleteDoctorCard(@PathVariable("id") String topicId) {
+//        userService.deleteById(topicId);
+//    }
+
+
+
+
+
+//    @DeleteMapping(path = "topic/{id}")
+//    public void deleteTopic(@PathVariable("id") String topicId) {
+//        topicRepository.deleteById(topicId);
+//    }
+
+
+
 
 }
 
