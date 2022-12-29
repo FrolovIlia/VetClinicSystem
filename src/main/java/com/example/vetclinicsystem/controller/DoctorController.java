@@ -15,7 +15,7 @@ public class DoctorController {
     @Autowired
     private DoctorService userService;
 
-    @GetMapping(path = "/doctor/")
+    @GetMapping(path = "/doctor")
     public ResponseEntity<List<Doctor>> findAll() {
         return ResponseEntity.ok(userService.findAll());
     }
@@ -25,7 +25,7 @@ public class DoctorController {
         return userService.findByUsername(username);
     }
 
-    @PostMapping(path = "/doctor/")
+    @PostMapping(path = "/doctor")
     public void post(@RequestBody Doctor doctor) {
         userService.saveDoctor(doctor);
     }
@@ -34,9 +34,8 @@ public class DoctorController {
 
 //    @PatchMapping(path = "/doctor/{doctorID}")
 //    public Optional<Doctor> update(@PathVariable Integer doctorId, @RequestBody CreateUserRequest request) {
-//        return userService.updateDoctor(userId, request);
+//        return userService.updateDoctor(doctorId, request);
 //    }
-
 
     //Пример
 //    @PatchMapping(value = "/{userId}", consumes = APPLICATION_JSON_VALUE, produces = APPLICATION_JSON_VALUE)
@@ -46,16 +45,19 @@ public class DoctorController {
 
 
 
-
-
     //Добавить удаление по ID
 
-//    @DeleteMapping(path = "/doctor/{id}")
-//    public void deleteDoctorCard(@PathVariable("id") String topicId) {
-//        userService.deleteById(topicId);
-//    }
+    @DeleteMapping(path = "/doctor/{id}")
+    public String delete(@PathVariable("id") int id) {
+        userService.deleteDoctor(id);
+        return null;
+    }
 
-
+    @DeleteMapping(path = "/doctor")
+    public String delete() {
+        userService.deleteDoctors();
+        return null;
+    }
 
 
 

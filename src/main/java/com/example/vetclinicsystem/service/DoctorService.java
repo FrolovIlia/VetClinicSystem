@@ -31,5 +31,15 @@ public class DoctorService {
     }
 
 
+    public void deleteDoctor(int id) {
+        userRepository.deleteById("doctorId");
+    }
+
+    public void deleteDoctors() {
+        userRepository.deleteAll();
+    }
+
+
+
 
 }
