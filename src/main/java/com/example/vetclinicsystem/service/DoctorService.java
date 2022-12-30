@@ -20,8 +20,6 @@ public class DoctorService {
     }
 
 
-
-
     public List<Doctor> findAll(){
         return userRepository.findAll();
     }
@@ -30,7 +28,7 @@ public class DoctorService {
         return userRepository.findDoctorByDoctorFullName(username);
     }
 
-
+    //TODO ошибка - вместо инта передаю строку
     public void deleteDoctor(int id) {
         userRepository.deleteById("doctorId");
     }

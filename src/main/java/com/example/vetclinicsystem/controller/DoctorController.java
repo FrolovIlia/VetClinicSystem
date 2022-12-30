@@ -47,11 +47,11 @@ public class DoctorController {
 
     //Добавить удаление по ID
 
-    @DeleteMapping(path = "/doctor/{id}")
-    public String delete(@PathVariable("id") int id) {
-        userService.deleteDoctor(id);
-        return null;
-    }
+//    @DeleteMapping(path = "/doctor/{id}")
+//    public String delete(@PathVariable("id") int id) {
+//        userService.deleteDoctor(id);
+//        return null;
+//    }
 
     @DeleteMapping(path = "/doctor")
     public String delete() {
@@ -59,12 +59,17 @@ public class DoctorController {
         return null;
     }
 
+    @DeleteMapping(path = "/doctor/{id}")
+    public void delete(@PathVariable("id") int id) {
+        userService.deleteDoctor(id);
+    }
 
 
-//    @DeleteMapping(path = "topic/{id}")
-//    public void deleteTopic(@PathVariable("id") String topicId) {
-//        topicRepository.deleteById(topicId);
-//    }
+//// пример
+//    @DeleteMapping("/{id}")
+////    public void delete(@PathVariable("id") EmpInfo id) {
+////        this.employeeRepo.delete(id);
+////    }
 
 
 

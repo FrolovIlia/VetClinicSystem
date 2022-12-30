@@ -70,7 +70,7 @@
     "ASKED_ADD_EXTERNAL_FILES": "true",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "last_opened_file_path": "C:/Users/Сергей/IdeaProjects/VetClinicSystem",
+    "last_opened_file_path": "C:/Users/Сергей/IdeaProjects/SpringCourse/Lesson23.CRUD_App3",
     "project.structure.last.edited": "Project",
     "project.structure.proportion": "0.15",
     "project.structure.side.proportion": "0.2",
@@ -202,7 +202,14 @@
       <option name="project" value="LOCAL" />
       <updated>1672260444381</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="Add Get mapping by username. Start work for Patch and Delete.">
+      <created>1672347842243</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1672347842243</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
