@@ -15,8 +15,9 @@ public class DoctorService {
     private DoctorRepository userRepository;
 
 
-    public void saveDoctor(Doctor doctor){
+    public Doctor saveDoctor(Doctor doctor){
         userRepository.save(doctor);
+        return doctor;
     }
 
 
@@ -28,16 +29,8 @@ public class DoctorService {
         return userRepository.findDoctorByDoctorFullName(username);
     }
 
-    //TODO ошибка - вместо инта передаю строку
-    public void deleteDoctor(int id) {
-        userRepository.deleteById("doctorId");
-    }
-
     public void deleteDoctors() {
         userRepository.deleteAll();
     }
-
-
-
 
 }
