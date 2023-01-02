@@ -4,6 +4,7 @@ import com.example.vetclinicsystem.model.Doctor;
 import com.example.vetclinicsystem.repository.DoctorRepository;
 import com.example.vetclinicsystem.service.DoctorService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
@@ -18,7 +19,7 @@ public class DoctorController {
     @Autowired
     private DoctorRepository doctorRepository;
 
-    @GetMapping(path = "/doctor")
+    @GetMapping(path = "/doctors")
     public ResponseEntity<List<Doctor>> findAll() {
         return ResponseEntity.ok(userService.findAll());
     }
@@ -33,27 +34,21 @@ public class DoctorController {
         return userService.saveDoctor(doctor);
     }
 
-    //Добавить обновление - Update по ID
-
-//    @PatchMapping(path = "/doctor/{doctorId}")
-//    public Optional<Doctor> update(@PathVariable Integer doctorId, @RequestBody CreateUserRequest request) {
-//        return userService.updateDoctor(doctorId, request);
-//    }
-
+    @PatchMapping("/doctor/{doctorId}/{doctorFullName}")
+    public ResponseEntity<Doctor> updateDoctor(@PathVariable String doctorId, @PathVariable String doctorFullName) {
+        try {
+            Doctor doctor = doctorRepository.findById(doctorId).get();
+            doctor.setDoctorFullName(doctorFullName);
+            return new ResponseEntity<Doctor>(doctorRepository.save(doctor), HttpStatus.OK);
+        } catch (Exception e) {
+            return new ResponseEntity<>(HttpStatus.INTERNAL_SERVER_ERROR);
+        }
+    }
 
     @DeleteMapping(path = "/doctor/{id}")
     public void deleteDoctor(@PathVariable("id") String doctorId) {
         doctorRepository.deleteById(doctorId);
     }
-
-
-    @DeleteMapping(path = "/doctor")
-    public String delete() {
-        userService.deleteDoctors();
-        return null;
-    }
-
-
 
 }
 

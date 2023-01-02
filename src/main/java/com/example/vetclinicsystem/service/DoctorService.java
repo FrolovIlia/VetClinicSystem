@@ -20,7 +20,6 @@ public class DoctorService {
         return doctor;
     }
 
-
     public List<Doctor> findAll(){
         return userRepository.findAll();
     }
@@ -33,4 +32,7 @@ public class DoctorService {
         userRepository.deleteAll();
     }
 
+//    public Optional<Doctor> updateDoctor(String doctorId, String doctorFullName) {
+//        return null;
+//    }
 }
