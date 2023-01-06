@@ -4,9 +4,16 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e9c20990-f2c9-49bc-a421-c086a562c957" name="Changes" comment="Create &quot;Client&quot; line.">
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/vetclinicsystem/controller/ClientController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/vetclinicsystem/controller/ClientController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/vetclinicsystem/service/ClientService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/vetclinicsystem/service/ClientService.java" afterDir="false" />
+    <list default="true" id="e9c20990-f2c9-49bc-a421-c086a562c957" name="Changes" comment="Final refactoring &quot;Client&quot; line.">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/vetclinicsystem/service/PatientService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/vetclinicsystem/controller/DoctorController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/vetclinicsystem/controller/DoctorController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/vetclinicsystem/controller/PatientController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/vetclinicsystem/controller/PatientController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/vetclinicsystem/model/Doctor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/vetclinicsystem/model/Doctor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/vetclinicsystem/model/Patient.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/vetclinicsystem/model/Patient.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/vetclinicsystem/repository/PatientRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/vetclinicsystem/repository/PatientRepository.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/vetclinicsystem/service/DoctorService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/vetclinicsystem/service/DoctorService.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -245,7 +252,14 @@
       <option name="project" value="LOCAL" />
       <updated>1673022161977</updated>
     </task>
-    <option name="localTasksCounter" value="18" />
+    <task id="LOCAL-00018" summary="Final refactoring &quot;Client&quot; line.">
+      <created>1673022850281</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1673022850281</updated>
+    </task>
+    <option name="localTasksCounter" value="19" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -276,6 +290,7 @@
     <MESSAGE value="Add method PATCH for a doctor." />
     <MESSAGE value="Create connection with my database." />
     <MESSAGE value="Create &quot;Client&quot; line." />
-    <option name="LAST_COMMIT_MESSAGE" value="Create &quot;Client&quot; line." />
+    <MESSAGE value="Final refactoring &quot;Client&quot; line." />
+    <option name="LAST_COMMIT_MESSAGE" value="Final refactoring &quot;Client&quot; line." />
   </component>
 </project>

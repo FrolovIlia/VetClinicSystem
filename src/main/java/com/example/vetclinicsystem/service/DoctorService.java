@@ -14,6 +14,10 @@ public class DoctorService {
     @Autowired
     private DoctorRepository doctorRepository;
 
+    public DoctorService(DoctorRepository doctorRepository) {
+        this.doctorRepository = doctorRepository;
+    }
+
     public Doctor saveDoctor(Doctor doctor){
         doctorRepository.save(doctor);
         return doctor;

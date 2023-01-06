@@ -9,7 +9,7 @@ public class Patient {
     @Id
     private String patientId;
     private String patientNickname;
-    private String color;
-    private String breed;  //порода
+    private String colour;
+    private String type;
     private int age;
 }

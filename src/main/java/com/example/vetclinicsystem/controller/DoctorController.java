@@ -49,6 +49,5 @@ public class DoctorController {
     public void deleteDoctor(@PathVariable("id") String doctorId) {
         doctorRepository.deleteById(doctorId);
     }
-
 }
 
