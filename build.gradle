@@ -40,6 +40,8 @@ dependencies {
 //    expand(project: project, foo: 'bar')
 //
 //}
+
+
 jar {
     manifest {
         attributes(

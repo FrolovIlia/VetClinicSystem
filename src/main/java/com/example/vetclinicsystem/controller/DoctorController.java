@@ -15,23 +15,23 @@ import java.util.Optional;
 @RestController
 public class DoctorController {
     @Autowired
-    private DoctorService userService;
+    private DoctorService doctorService;
     @Autowired
     private DoctorRepository doctorRepository;
 
     @GetMapping(path = "/doctors")
     public ResponseEntity<List<Doctor>> findAll() {
-        return ResponseEntity.ok(userService.findAll());
+        return ResponseEntity.ok(doctorService.findAll());
     }
 
     @GetMapping(path = "/doctor/{username}")
     public Optional<Doctor> findById(@PathVariable("username") String username) {
-        return userService.findByUsername(username);
+        return doctorService.findByUsername(username);
     }
 
     @PostMapping(path = "/doctor")
     public Doctor post(@RequestBody Doctor doctor) {
-        return userService.saveDoctor(doctor);
+        return doctorService.saveDoctor(doctor);
     }
 
     @PatchMapping("/doctor/{doctorId}/{doctorFullName}")

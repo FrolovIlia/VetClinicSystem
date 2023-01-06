@@ -12,25 +12,24 @@ import java.util.Optional;
 public class DoctorService {
 
     @Autowired
-    private DoctorRepository userRepository;
-
+    private DoctorRepository doctorRepository;
 
     public Doctor saveDoctor(Doctor doctor){
-        userRepository.save(doctor);
+        doctorRepository.save(doctor);
         return doctor;
     }
 
     public List<Doctor> findAll(){
-        return userRepository.findAll();
+        return doctorRepository.findAll();
     }
 
     public Optional<Doctor> findByUsername(String username){
-        return userRepository.findDoctorByDoctorFullName(username);
+        return doctorRepository.findDoctorByDoctorFullName(username);
     }
 
-    public void deleteDoctors() {
-        userRepository.deleteAll();
-    }
+//    public void deleteDoctors() {
+//        doctorRepository.deleteAll();
+//    }
 
 //    public Optional<Doctor> updateDoctor(String doctorId, String doctorFullName) {
 //        return null;
