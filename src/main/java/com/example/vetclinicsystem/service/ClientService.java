@@ -15,6 +15,7 @@ public class ClientService {
     private ClientRepository clientRepository;
 
     public Client saveClient(Client client) {
+        clientRepository.save(client);
         return client;
     }
 

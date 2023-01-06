@@ -26,12 +26,4 @@ public class DoctorService {
     public Optional<Doctor> findByUsername(String username){
         return doctorRepository.findDoctorByDoctorFullName(username);
     }
-
-//    public void deleteDoctors() {
-//        doctorRepository.deleteAll();
-//    }
-
-//    public Optional<Doctor> updateDoctor(String doctorId, String doctorFullName) {
-//        return null;
-//    }
 }

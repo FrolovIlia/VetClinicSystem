@@ -4,16 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e9c20990-f2c9-49bc-a421-c086a562c957" name="Changes" comment="Create connection with my database.">
-      <change afterPath="$PROJECT_DIR$/.idea/jpa-buddy.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/vetclinicsystem/service/ClientService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
+    <list default="true" id="e9c20990-f2c9-49bc-a421-c086a562c957" name="Changes" comment="Create &quot;Client&quot; line.">
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/vetclinicsystem/controller/ClientController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/vetclinicsystem/controller/ClientController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/vetclinicsystem/controller/DoctorController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/vetclinicsystem/controller/DoctorController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/vetclinicsystem/model/Client.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/vetclinicsystem/model/Client.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/vetclinicsystem/repository/ClientRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/vetclinicsystem/repository/ClientRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/vetclinicsystem/service/ClientService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/vetclinicsystem/service/ClientService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/vetclinicsystem/service/DoctorService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/vetclinicsystem/service/DoctorService.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -245,7 +238,14 @@
       <option name="project" value="LOCAL" />
       <updated>1672751093036</updated>
     </task>
-    <option name="localTasksCounter" value="17" />
+    <task id="LOCAL-00017" summary="Create &quot;Client&quot; line.">
+      <created>1673022161977</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1673022161977</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -275,21 +275,7 @@
     <MESSAGE value="Add method DELETE by ID." />
     <MESSAGE value="Add method PATCH for a doctor." />
     <MESSAGE value="Create connection with my database." />
-    <option name="LAST_COMMIT_MESSAGE" value="Create connection with my database." />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-method">
-          <url>file://$PROJECT_DIR$/src/main/java/com/example/vetclinicsystem/service/DoctorService.java</url>
-          <line>29</line>
-          <properties class="com.example.vetclinicsystem.service.DoctorService" method="deleteDoctors">
-            <option name="EMULATED" value="true" />
-            <option name="WATCH_EXIT" value="false" />
-          </properties>
-          <option name="timeStamp" value="1" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
+    <MESSAGE value="Create &quot;Client&quot; line." />
+    <option name="LAST_COMMIT_MESSAGE" value="Create &quot;Client&quot; line." />
   </component>
 </project>

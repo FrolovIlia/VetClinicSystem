@@ -1,7 +1,6 @@
 package com.example.vetclinicsystem.controller;
 
 import com.example.vetclinicsystem.model.Client;
-import com.example.vetclinicsystem.model.Doctor;
 import com.example.vetclinicsystem.repository.ClientRepository;
 import com.example.vetclinicsystem.service.ClientService;
 import org.springframework.beans.factory.annotation.Autowired;
