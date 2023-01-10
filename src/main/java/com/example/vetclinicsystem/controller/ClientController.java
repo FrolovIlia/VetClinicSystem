@@ -8,9 +8,13 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
+import org.springframework.web.server.ResponseStatusException;
 
+import javax.validation.Valid;
 import java.util.List;
 import java.util.Optional;
+
+import static org.springframework.http.HttpStatus.NOT_FOUND;
 
 
 @RestController
@@ -35,20 +39,33 @@ public class ClientController {
         return clientService.saveClient(client);
     }
 
+//    @PutMapping("/clients/{clientId}")
+//    Client replaceClient(@RequestBody Client newClient, @PathVariable String clientId) {
+//
+//        return clientRepository.findById(clientId)
+//                .map(client -> {
+//                    client.setClientFullName(newClient.getClientFullName());
+//                    return clientRepository.save(client);
+//                })
+//                .orElseGet(() -> {
+//                    newClient.setClientId(clientId);
+//                    return clientRepository.save(newClient);
+//                });
+//    }
+
+
     @PutMapping("/clients/{clientId}")
-    Client replaceClient(@RequestBody Client newClient, @PathVariable String clientId) {
+    public ResponseEntity<Client> updateClient(@PathVariable(value = "clientId") String clientId,
+                                               @Valid @RequestBody Client newClient) throws ResponseStatusException {
+        Client client = clientRepository.findById(clientId)
+                .orElseThrow(() -> new ResponseStatusException(NOT_FOUND, "Unable to find resource"));
 
-        return clientRepository.findById(clientId)
-                .map(client -> {
-                    client.setClientFullName(newClient.getClientFullName());
-                    return clientRepository.save(client);
-                })
-                .orElseGet(() -> {
-                    newClient.setClientId(clientId);
-                    return clientRepository.save(newClient);
-                });
+        client.setClientId(newClient.getClientId());
+        client.setClientFullName(newClient.getClientFullName());
+
+        final Client updatedClient = clientRepository.save(client);
+        return ResponseEntity.ok(updatedClient);
     }
-
 
 
     @DeleteMapping(path = "/client/{id}")

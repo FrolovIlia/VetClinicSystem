@@ -6,9 +6,13 @@ import com.example.vetclinicsystem.service.PatientService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
+import org.springframework.web.server.ResponseStatusException;
 
+import javax.validation.Valid;
 import java.util.List;
 import java.util.Optional;
+
+import static org.springframework.http.HttpStatus.NOT_FOUND;
 
 @RestController
 public class PatientController {
@@ -32,46 +36,21 @@ public class PatientController {
         return patientService.savePatient(patient);
     }
 
-//    @PutMapping("/employees/{id}")
-//    public ResponseEntity<Employee> updateEmployee(@PathVariable(value = "id") Long employeeId,
-//                                                   @Valid @RequestBody Employee employeeDetails) throws ResourceNotFoundException {
-//        Employee employee = employeeRepository.findById(employeeId)
-//                .orElseThrow(() -> new ResourceNotFoundException("Employee not found for this id :: " + employeeId));
-//
-//        employee.setEmailId(employeeDetails.getEmailId());
-//        employee.setLastName(employeeDetails.getLastName());
-//        employee.setFirstName(employeeDetails.getFirstName());
-//        final Employee updatedEmployee = employeeRepository.save(employee);
-//        return ResponseEntity.ok(updatedEmployee);
-//    }
-
-    // Разобраться с PUT
     @PutMapping("/patients/{patientId}")
-    Patient replacePatient(@RequestBody Patient newPatient,
-                           @PathVariable String patientId,
-                           @PathVariable String patientNickname,
-                           @PathVariable String colour,
-                           @PathVariable String type,
-                           @PathVariable int age) {
+    public ResponseEntity<Patient> updatePatient(@PathVariable(value = "patientId") String patientId,
+                                                   @Valid @RequestBody Patient newPatient) throws ResponseStatusException {
+            Patient patient = patientRepository.findById(patientId)
+                .orElseThrow(() -> new ResponseStatusException(NOT_FOUND, "Unable to find resource"));
 
-        return patientRepository.findById(patientId)
-                .map(patient -> {
-                    patient.setPatientId(newPatient.getPatientId());
-                    patient.setPatientNickname(newPatient.getPatientNickname());
-                    patient.setColour(newPatient.getColour());
-                    patient.setType(newPatient.getType());
-                    patient.setAge(newPatient.getAge());
-                    return patientRepository.save(patient);
-                })
-                .orElseGet(() -> {
-                    newPatient.setPatientId(patientId);
-                    newPatient.setPatientNickname(patientNickname);
-                    newPatient.setColour(colour);
-                    newPatient.setType(type);
-                    newPatient.setAge(age);
-                    return patientRepository.save(newPatient);
-                });
+        patient.setPatientId(newPatient.getPatientId());
+        patient.setPatientNickname(newPatient.getPatientNickname());
+        patient.setColour(newPatient.getColour());
+        patient.setType(newPatient.getType());
+        patient.setAge(newPatient.getAge());
+        final Patient updatedPatient = patientRepository.save(patient);
+        return ResponseEntity.ok(updatedPatient);
     }
+
 
     @DeleteMapping(path = "/patient/{id}")
     public void deletePatient(@PathVariable("id") String patientId) {
