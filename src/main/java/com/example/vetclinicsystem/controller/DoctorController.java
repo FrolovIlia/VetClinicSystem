@@ -25,24 +25,29 @@ public class DoctorController {
     }
 
     @GetMapping(path = "/doctor/{username}")
-    public Optional<Doctor> findById(@PathVariable("username") String username) {
+    public Optional<Doctor> findByDoctorName(@PathVariable("username") String username) {
         return doctorService.findByUsername(username);
     }
+
 
     @PostMapping(path = "/doctor")
     public Doctor post(@RequestBody Doctor doctor) {
         return doctorService.saveDoctor(doctor);
     }
 
-    @PatchMapping("/doctor/{doctorId}/{doctorFullName}")
-    public ResponseEntity<Doctor> updateDoctor(@PathVariable String doctorId, @PathVariable String doctorFullName) {
-        try {
-            Doctor doctor = doctorRepository.findById(doctorId).get();
-            doctor.setDoctorFullName(doctorFullName);
-            return new ResponseEntity<Doctor>(doctorRepository.save(doctor), HttpStatus.OK);
-        } catch (Exception e) {
-            return new ResponseEntity<>(HttpStatus.INTERNAL_SERVER_ERROR);
-        }
+
+    @PutMapping("/doctors/{doctorId}")
+    Doctor replaceDoctor(@RequestBody Doctor newDoctor, @PathVariable String doctorId) {
+
+        return doctorRepository.findById(doctorId)
+                .map(doctor -> {
+                    doctor.setDoctorFullName(newDoctor.getDoctorFullName());
+                    return doctorRepository.save(doctor);
+                })
+                .orElseGet(() -> {
+                    newDoctor.setDoctorId(doctorId);
+                    return doctorRepository.save(newDoctor);
+                });
     }
 
     @DeleteMapping(path = "/doctor/{id}")

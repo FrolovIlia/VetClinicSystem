@@ -30,4 +30,6 @@ public class DoctorService {
     public Optional<Doctor> findByUsername(String username){
         return doctorRepository.findDoctorByDoctorFullName(username);
     }
+
+
 }
