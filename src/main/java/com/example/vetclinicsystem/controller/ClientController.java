@@ -1,11 +1,9 @@
 package com.example.vetclinicsystem.controller;
 
 import com.example.vetclinicsystem.model.Client;
-import com.example.vetclinicsystem.model.Doctor;
 import com.example.vetclinicsystem.repository.ClientRepository;
 import com.example.vetclinicsystem.service.ClientService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.server.ResponseStatusException;
@@ -38,20 +36,6 @@ public class ClientController {
     public Client post(@RequestBody Client client) {
         return clientService.saveClient(client);
     }
-
-//    @PutMapping("/clients/{clientId}")
-//    Client replaceClient(@RequestBody Client newClient, @PathVariable String clientId) {
-//
-//        return clientRepository.findById(clientId)
-//                .map(client -> {
-//                    client.setClientFullName(newClient.getClientFullName());
-//                    return clientRepository.save(client);
-//                })
-//                .orElseGet(() -> {
-//                    newClient.setClientId(clientId);
-//                    return clientRepository.save(newClient);
-//                });
-//    }
 
 
     @PutMapping("/clients/{clientId}")

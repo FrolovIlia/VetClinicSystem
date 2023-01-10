@@ -1,11 +1,9 @@
 package com.example.vetclinicsystem.controller;
 
 import com.example.vetclinicsystem.model.Doctor;
-import com.example.vetclinicsystem.model.Patient;
 import com.example.vetclinicsystem.repository.DoctorRepository;
 import com.example.vetclinicsystem.service.DoctorService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.server.ResponseStatusException;
@@ -34,26 +32,10 @@ public class DoctorController {
         return doctorService.findByUsername(username);
     }
 
-
     @PostMapping(path = "/doctor")
     public Doctor post(@RequestBody Doctor doctor) {
         return doctorService.saveDoctor(doctor);
     }
-
-
-//    @PutMapping("/doctors/{doctorId}")
-//    Doctor replaceDoctor(@RequestBody Doctor newDoctor, @PathVariable String doctorId) {
-//
-//        return doctorRepository.findById(doctorId)
-//                .map(doctor -> {
-//                    doctor.setDoctorFullName(newDoctor.getDoctorFullName());
-//                    return doctorRepository.save(doctor);
-//                })
-//                .orElseGet(() -> {
-//                    newDoctor.setDoctorId(doctorId);
-//                    return doctorRepository.save(newDoctor);
-//                });
-//    }
 
     @PutMapping("/doctors/{doctorId}")
     public ResponseEntity<Doctor> updateDoctor(@PathVariable(value = "doctorId") String doctorId,
@@ -67,8 +49,6 @@ public class DoctorController {
         final Doctor updatedDoctor = doctorRepository.save(doctor);
         return ResponseEntity.ok(updatedDoctor);
     }
-
-
 
     @DeleteMapping(path = "/doctor/{id}")
     public void deleteDoctor(@PathVariable("id") String doctorId) {
