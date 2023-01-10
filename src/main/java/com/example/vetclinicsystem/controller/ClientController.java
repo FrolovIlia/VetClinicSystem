@@ -1,6 +1,7 @@
 package com.example.vetclinicsystem.controller;
 
 import com.example.vetclinicsystem.model.Client;
+import com.example.vetclinicsystem.model.Doctor;
 import com.example.vetclinicsystem.repository.ClientRepository;
 import com.example.vetclinicsystem.service.ClientService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -34,16 +35,21 @@ public class ClientController {
         return clientService.saveClient(client);
     }
 
-    @PatchMapping("/client/{clientId}/{clientFullName}")
-    public ResponseEntity<Client> updateClient(@PathVariable String clientId, @PathVariable String clientFullName) {
-        try {
-            Client client = clientRepository.findById(clientId).get();
-            client.setClientFullName(clientFullName);
-            return new ResponseEntity<Client>(clientRepository.save(client), HttpStatus.OK);
-        } catch (Exception e) {
-            return new ResponseEntity<>(HttpStatus.INTERNAL_SERVER_ERROR);
-        }
+    @PutMapping("/clients/{clientId}")
+    Client replaceClient(@RequestBody Client newClient, @PathVariable String clientId) {
+
+        return clientRepository.findById(clientId)
+                .map(client -> {
+                    client.setClientFullName(newClient.getClientFullName());
+                    return clientRepository.save(client);
+                })
+                .orElseGet(() -> {
+                    newClient.setClientId(clientId);
+                    return clientRepository.save(newClient);
+                });
     }
+
+
 
     @DeleteMapping(path = "/client/{id}")
     public void deleteClient(@PathVariable("id") String clientId) {

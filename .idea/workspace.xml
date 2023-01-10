@@ -4,11 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e9c20990-f2c9-49bc-a421-c086a562c957" name="Changes" comment="Start work with &quot;Patient&quot; line.">
+    <list default="true" id="e9c20990-f2c9-49bc-a421-c086a562c957" name="Changes" comment="Create PUT method for DoctorController.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/vetclinicsystem/controller/DoctorController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/vetclinicsystem/controller/DoctorController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/vetclinicsystem/service/DoctorService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/vetclinicsystem/service/DoctorService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/vetclinicsystem/controller/ClientController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/vetclinicsystem/controller/ClientController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/vetclinicsystem/controller/PatientController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/vetclinicsystem/controller/PatientController.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -76,7 +75,7 @@
     "project.structure.last.edited": "Project",
     "project.structure.proportion": "0.15",
     "project.structure.side.proportion": "0.2",
-    "settings.editor.selected.configurable": "reference.settingsdialog.project.gradle"
+    "settings.editor.selected.configurable": "preferences.pluginManager"
   }
 }]]></component>
   <component name="RecentsManager">
@@ -260,7 +259,14 @@
       <option name="project" value="LOCAL" />
       <updated>1673037242768</updated>
     </task>
-    <option name="localTasksCounter" value="20" />
+    <task id="LOCAL-00020" summary="Create PUT method for DoctorController.">
+      <created>1673356134851</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1673356134851</updated>
+    </task>
+    <option name="localTasksCounter" value="21" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -293,6 +299,7 @@
     <MESSAGE value="Create &quot;Client&quot; line." />
     <MESSAGE value="Final refactoring &quot;Client&quot; line." />
     <MESSAGE value="Start work with &quot;Patient&quot; line." />
-    <option name="LAST_COMMIT_MESSAGE" value="Start work with &quot;Patient&quot; line." />
+    <MESSAGE value="Create PUT method for DoctorController." />
+    <option name="LAST_COMMIT_MESSAGE" value="Create PUT method for DoctorController." />
   </component>
 </project>
