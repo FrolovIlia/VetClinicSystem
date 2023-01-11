@@ -6,7 +6,7 @@ import org.springframework.data.annotation.Id;
 @Data
 public class MedicalCard {
     @Id
-    private String id;
+    private String medicalCardId;
     private String patientNickname;
     private String problem;
     private String bio;
