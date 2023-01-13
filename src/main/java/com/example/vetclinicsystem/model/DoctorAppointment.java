@@ -7,9 +7,9 @@ import java.time.LocalDateTime;
 
 
 @Data
-public class DoctorsAppointment {
+public class DoctorAppointment {
     @Id
-    private String id;
+    private String appointmentId;
     private String doctorFullName;
     private String clientFullName;
     private String patientNickname;
