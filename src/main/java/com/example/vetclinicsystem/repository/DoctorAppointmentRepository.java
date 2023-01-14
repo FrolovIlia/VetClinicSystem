@@ -6,7 +6,6 @@ import org.springframework.stereotype.Repository;
 
 import java.util.Optional;
 
-// Переработать запрос на поиск
 @Repository
 public interface DoctorAppointmentRepository extends MongoRepository<DoctorAppointment, String> {
     Optional<DoctorAppointment> findDoctorAppointmentByClientFullName(String clientFullName);

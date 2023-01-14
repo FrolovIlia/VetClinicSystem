@@ -22,7 +22,7 @@ public class DoctorAppointmentController {
     @Autowired
     private DoctorAppointmentRepository doctorAppointmentRepository;
 
-    @GetMapping(path = "/doctorAppointment")
+    @GetMapping(path = "/doctorAppointments")
     public ResponseEntity<List<DoctorAppointment>> findAll() {
         return ResponseEntity.ok(doctorAppointmentService.findAll());
     }

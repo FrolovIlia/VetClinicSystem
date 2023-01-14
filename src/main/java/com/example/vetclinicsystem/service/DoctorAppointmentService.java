@@ -14,10 +14,6 @@ public class DoctorAppointmentService {
     @Autowired
     private DoctorAppointmentRepository doctorAppointmentRepository;
 
-    public DoctorAppointmentService(DoctorAppointmentRepository doctorAppointmentRepository) {
-        this.doctorAppointmentRepository = doctorAppointmentRepository;
-    }
-
     public DoctorAppointment saveDoctorAppointment(DoctorAppointment doctorAppointment) {
         doctorAppointmentRepository.save(doctorAppointment);
         return doctorAppointment;
